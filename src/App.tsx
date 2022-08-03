@@ -7,7 +7,7 @@ function App() {
 		<BrowserRouter>
 			<Layout>
 				<Routes>
-					<Route element={<Expressions />} path="/expressions" />
+					<Route element={<Expressions />} path="/" />
 				</Routes>
 			</Layout>
 		</BrowserRouter>

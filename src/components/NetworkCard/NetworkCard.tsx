@@ -2,17 +2,6 @@ import styled from "styled-components";
 import { Network } from "../../containers/Expressions/Expressions";
 import { getNetworkIcon } from "../../utils/getNetworkIcon";
 
-export const NetworkCard = (props: Network) => {
-	return (
-		<Card>
-			<CardContent>
-				<IconImage src={getNetworkIcon(props.symbol)} alt={props.symbol} />
-				<CardText>{props.networkName}</CardText>
-			</CardContent>
-		</Card>
-	);
-};
-
 const Card = styled.button`
 	width: 250px;
 	height: 80px;
@@ -42,3 +31,14 @@ const IconImage = styled.img`
 	width: 45px;
 	height: 45px;
 `;
+
+export const NetworkCard = (props: Network) => {
+	return (
+		<Card>
+			<CardContent>
+				<IconImage src={getNetworkIcon(props.symbol)} alt={props.symbol} />
+				<CardText>{props.networkName}</CardText>
+			</CardContent>
+		</Card>
+	);
+};
