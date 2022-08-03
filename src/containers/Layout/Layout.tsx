@@ -4,7 +4,7 @@ import { Navbar, Sidebar } from "../../components";
 import { brandsKey } from "../../constants/brands";
 import { getBrand } from "../../mock/getBrand";
 
-export const Layout = (props: { children?: JSX.Element }) => {
+export const Layout = (props: { children: JSX.Element }) => {
 	const [brand, setBrand] = useState<brandsKey>("QN");
 
 	useEffect(() => {
@@ -18,7 +18,7 @@ export const Layout = (props: { children?: JSX.Element }) => {
 			<Sidebar brand={brand} />
 			<Container>
 				<Navbar />
-				<div>{props.children}</div>
+				<MainContent>{props.children}</MainContent>
 			</Container>
 		</LayoutContainer>
 	);
@@ -33,4 +33,10 @@ const Container = styled.div`
 	display: flex;
 	flex-direction: column;
 	width: 100%;
+`;
+
+const MainContent = styled.div`
+	width: 100%;
+	height: calc(100vh - 100px);
+	background-color: #0b1c2f;
 `;

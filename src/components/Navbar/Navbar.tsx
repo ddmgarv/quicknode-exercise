@@ -9,6 +9,8 @@ const NavbarContainer = styled.nav`
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	border-bottom: 1px solid #112c49;
+	z-index: 1000;
 `;
 
 const NavbarOptionsList = styled.ul`

@@ -3,12 +3,14 @@ import { Link } from "react-router-dom";
 import { sidebarOptions } from "../../constants/sidebarOptions";
 import { brands, brandsKey } from "../../constants/brands";
 
-const Brand = styled.div`
+const Brand = styled.h1`
 	width: 100%;
 	height: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin: 0;
+	padding: 0;
 `;
 
 const SiderbarContainer = styled.div`
@@ -18,6 +20,7 @@ const SiderbarContainer = styled.div`
 	border-right: 1px solid #112c49;
 	display: flex;
 	flex-direction: column;
+	z-index: 1000;
 `;
 
 const SidebarOptionsList = styled.ul`
