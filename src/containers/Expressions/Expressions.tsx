@@ -51,7 +51,7 @@ export const Expressions = () => {
 			</div>
 			<CardsContainer>
 				{availableNetworks.map((networkData) => (
-					<NetworkCard {...networkData} />
+					<NetworkCard key={networkData.symbol} {...networkData} />
 				))}
 			</CardsContainer>
 		</ExpressionsContainer>
